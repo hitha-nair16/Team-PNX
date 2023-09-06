@@ -1,1 +1,1 @@
-# Team-PNX
+# Team-PNX (Automated Meeting Room Booking System)
