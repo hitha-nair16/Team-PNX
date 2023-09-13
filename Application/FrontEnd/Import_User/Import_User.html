@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,29 +12,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Import Users</title>
     <link rel="stylesheet" href="importstyle.css">
+    <script src = "importuser.js"></script>
 </head>
 <body>
     <div class="wrapper">
         <div class="title">
             Import Users
         </div>
-        <div>
+        <div id="letsee">
         Click the button below to request user data for import.
     </div>
     <div>
        
-        <input type="submit" value="Import Users">
-
+        <input type="submit" value="Import Users" id="loadDataButton">
+        <div id="userData"></div>
     </div>
     </div>
-    </div>
-
-    <script>
-        document.getElementById('requestButton').addEventListener('click', function() {
-            // You can add JavaScript functionality here to request user data.
-            // For demonstration purposes, we'll show an alert.
-            alert('User data request initiated.');
-        });
-    </script>
+   
+     
 </body>
-</html>
+</html>  
+
+
+
+
+

@@ -1,0 +1,44 @@
+<users>
+  <user>
+    <Name>Sushant Apte</Name>
+    <Email>sushantapte123@gmail.com</Email>
+    <Phone>8281567915</Phone>
+    <Role>Admin</Role>
+  </user>
+   <user>
+    <Name>Himani Sen</Name>
+    <Email>himaniS@gmail.com</Email>
+    <Phone>8281765489</Phone>
+    <Role>Member</Role>
+  </user>
+   <user>
+    <Name>David Fin</Name>
+    <Email>davis@gmail.com</Email>
+    <Phone>7281765679</Phone>
+    <Role>Admin</Role>
+  </user>
+   <user>
+    <Name>Serena Kohl</Name>
+    <Email>skohl@gmail.com</Email>
+    <Phone>9781765076</Phone>
+    <Role>Member</Role>
+  </user>
+   <user>
+    <Name>Kavitha Nath</Name>
+    <Email>knath@gmail.com</Email>
+    <Phone>8281769569</Phone>
+    <Role>Manager</Role>
+  </user>
+   <user>
+    <Name>Ganga Bhatiya</Name>
+    <Email>gangab@gmail.com</Email>
+    <Phone>9281095234</Phone>
+    <Role>Member</Role>
+  </user>
+   <user>
+    <Name>Aravali Singh</Name>
+    <Email>aaravali34@gmail.com</Email>
+    <Phone>8281765094</Phone>
+    <Role>Manager</Role>
+  </user>
+</users>
