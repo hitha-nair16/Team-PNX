@@ -2,7 +2,7 @@ package com.pnx.services;
 
 import com.pnx.models.MeetingRoom;
 import com.pnx.models.Users;
-import com.pnx.models.Users.UserRole;
+import com.pnx.models.Users;
 
 
 import com.pnx.dao.MeetingRoomDao;
@@ -22,13 +22,13 @@ public class MeetingRoomServiceImpl implements MeetingRoomService {
 
 
 	@Override
-	public boolean createMeetingRoom(MeetingRoomService room, UserRole userRole) {
+	public boolean createMeetingRoom(MeetingRoom room, String userRole) {
 		// TODO Auto-generated method stub
         return meetingRoomDao.insertMeetingRoom(room, userRole);
 	}
 
 	@Override
-	public boolean updateMeetingRoom(MeetingRoomService room, UserRole userRole) {
+	public boolean updateMeetingRoom(MeetingRoom room, String userRole) {
 		// TODO Auto-generated method stub
         return meetingRoomDao.updateMeetingRoom(room, userRole);
 	}
@@ -40,7 +40,7 @@ public class MeetingRoomServiceImpl implements MeetingRoomService {
 	}
 
 	@Override
-	public boolean deleteMeetingRoom(String name, UserRole userRole) {
+	public boolean deleteMeetingRoom(String name, String userRole) {
 		// TODO Auto-generated method stub
 		return meetingRoomDao.deleteMeetingRoom(name,userRole);
 	}

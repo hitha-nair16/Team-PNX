@@ -3,7 +3,7 @@ package com.pnx.services;
 import java.util.List;
 
 import com.pnx.models.Meeting;
-import com.pnx.models.Users.UserRole;
+import com.pnx.models.Users;
 import com.pnx.dao.MeetingDao;
 import com.pnx.dao.MeetingDao;
 import com.pnx.exceptions.DatabaseException;
@@ -43,8 +43,8 @@ public class MeetingServiceImpl implements MeetingService {
     }
 
     @Override
-    public void createMeeting(Meeting meeting, UserRole userRole) throws UnauthorizedAccessException, DatabaseException {
-        if (userRole == UserRole.ADMIN || userRole == UserRole.MANAGER) {
+    public void createMeeting(Meeting meeting, String userRole) throws UnauthorizedAccessException, DatabaseException {
+        if (userRole == "Admin" || userRole =="Manager") {
             try {
                 meetingDAO.create(meeting);
             } catch (DatabaseException e) {
@@ -57,8 +57,8 @@ public class MeetingServiceImpl implements MeetingService {
 
    
     @Override
-    public void deleteMeeting(int id, UserRole userRole) throws MeetingNotFoundException, UnauthorizedAccessException, DatabaseException {
-        if (userRole == UserRole.ADMIN || userRole == UserRole.MANAGER) {
+    public void deleteMeeting(int id, String userRole) throws MeetingNotFoundException, UnauthorizedAccessException, DatabaseException {
+        if (userRole == "Admin" || userRole == "Manager") {
             try {
                 meetingDAO.delete(id);
             } catch (MeetingNotFoundException e) {
@@ -74,10 +74,10 @@ public class MeetingServiceImpl implements MeetingService {
     }
 
 	@Override
-	public void updateMeeting(Meeting meeting, UserRole userRole)
+	public void updateMeeting(Meeting meeting, String userRole)
 			throws MeetingNotFoundException, UnauthorizedAccessException, DatabaseException {
 		// TODO Auto-generated method stub
-		if (userRole == UserRole.ADMIN) {
+		if (userRole == "Admin") {
             try {
                 meetingDAO.update(meeting);
             } catch (MeetingNotFoundException e) {
