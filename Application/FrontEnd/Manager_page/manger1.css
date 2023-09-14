@@ -1,0 +1,111 @@
+/* CSS code to center a div with class name "base" both horizontally and vertically */
+/* CSS to set a background image for the body */
+body {
+    background-image: url('pic.jpeg'); /* Replace 'your-image-url.jpg' with your image file path */
+    background-size: cover; /* Cover the entire viewport */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+    background-attachment: fixed; /* Fixed background */
+    background-position: center center; /* Center the background image horizontally and vertically */
+    /* Add additional styles for text and content for better readability */
+    color: aquamarine; /* Text color */
+    /* Add other styles as needed */
+  }
+  
+
+
+
+.base {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+/* CSS to make h1 at the top with equal padding */
+h1 {
+    text-align: center; /* Center the text horizontally */
+    padding: 20px; /* Adjust the padding as needed */
+    margin: 0; /* Remove any default margin to ensure equal padding */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  /* CSS to style h1 at the top in bold with a larger font size */
+h1 {
+    font-size: 60px; /* Adjust the font size as needed */
+    font-weight: bold;
+    margin-top: 0; /* Remove any default margin to ensure it's at the top */
+  }
+  /* CSS for the manager1.html page */
+
+/* ... (Your existing CSS rules) ... */
+
+/* Style for the navigation bar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px;
+}
+
+.nav-button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #555;
+}
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px;
+}
+
+.nav-button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #555;
+}
+
+/* Style for the dropdown */
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}

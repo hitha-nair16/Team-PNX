@@ -1,12 +1,17 @@
 <users>
     <user>
-        <Username>team_pnx</Username>
+        <Username>Adam Hale</Username>
         <Password>password</Password>
         <Type>Admin</Type>
     </user>
     <user>
-        <Username>jane</Username>
+        <Username>Jane Kohl</Username>
         <Password>pass@123</Password>
         <Type>Manager</Type>
+    </user>
+    <user>
+        <Username>Klane Kudrow</Username>
+        <Password>football</Password>
+        <Type>Member</Type>
     </user>
 </users>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager Page</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="manger1.css">
+
+
+</head>
+<body>
+    <div class="base">
+    <header>
+        <h1>Manager Page</h1>
+    </header>
+
+   
+            
+        </ul>
+    </nav>
+
+   
+    
+    <div class="container2">
+        <nav class="navbar">
+            <button class="nav-button"><a href="../Dashboard/Dasboard.html">Dashboard</a>    </button>
+            <button class="nav-button"><a href="../Booked_Meetings/meetings.html">Meetings</a> </button>
+            <button class="nav-button"><a href="../Book_Meeting/book_meeting.html">Book a Room</a> </button>
+            <button class="nav-button"><a href="../home_new/home.html">Home</a> </button>
+            <button class="nav-button"><a href="../Login_Page/Login_Page.html">Book a Room</a> </button>
+        </nav>
+        
+    </div>
+</div>
+  
+
+    <script>
+        const menuButton = document.getElementById("menu-button");
+        const sidebar = document.getElementById("sidebar");
+
+        menuButton.addEventListener("click", () => {
+            if (sidebar.style.left === "0px") {
+                sidebar.style.left = "-250px";
+            } else {
+                sidebar.style.left = "0px";
+            }
+        });
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!-- meetings.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Booked Meetings</title>
+
+    <!-- Link to the Bootswatch Slate theme CSS (replace with the actual path) -->
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+        body {
+    background-image: url('pic6.webp'); /* Replace 'your-image-url.jpg' with your image file path */
+    background-size: cover; /* Cover the entire viewport */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+    background-attachment: fixed; /* Fixed background */
+    background-position: center center; /* Center the background image horizontally and vertically */
+    
+    /* Add other styles as needed */
+  }
+  
+        .container{
+    
+            
+  border: 5px solid;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+
+    text-align: center;
+    margin-top: 50x;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.227);
+
+    }
+
+    .btn-primary {
+            background-color: dimgray;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+    .btn-primary2{
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+</style>
+    
+</head>
+<body>
+    <div class="container">
+        <h2>Booked Meetings</h2>
+        <ul id="booked-meetings" class="list-group">
+            <!-- Booked meetings will be displayed here -->
+        </ul>
+        <a href="../Book_Meeting/book_meeting.html" class="btn btn-primary"> Add new meeting</a>
+        <a href="../Manager_page/manager1.html" class="btn btn-primary2">Return to home Page</a>
+    </div>
+
+    <script>
+        // Retrieve booked meetings from local storage
+        const bookedMeetings = JSON.parse(localStorage.getItem("bookedMeetings")) || [];
+
+        // Function to display booked meetings
+        function displayBookedMeetings() {
+            const bookedMeetingsList = document.getElementById("booked-meetings");
+            bookedMeetingsList.innerHTML = ''; // Clear the list
+
+            bookedMeetings.forEach((meeting) => {
+                const listItem = document.createElement("li");
+                listItem.className = "list-group-item";
+                listItem.innerHTML = `
+                    <strong>${meeting.meetingName}</strong> | 
+                    Room: ${meeting.meetingRoom} | 
+                    Date: ${meeting.startDate} | 
+                    Time: ${meeting.startTime} | 
+                    Duration: ${meeting.duration} hours
+                `;
+                bookedMeetingsList.appendChild(listItem);
+            });
+        }
+
+        // Initial display of booked meetings
+        displayBookedMeetings();
+    </script>
+</body>
+</html>

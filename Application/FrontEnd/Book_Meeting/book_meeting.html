@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="bootstrap.css">
+
+    <style>
+        body {
+    background-image: url('pic7.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    color: rgb(4, 49, 34);
+}
+         .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        
+            position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #f5f5f5;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        form {
+            text-align: left;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="time"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .btn-success {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .btn-primary2{
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .btn-primary:hover,
+        .btn-success:hover {
+            background-color: #0056b3;
+        }
+    </style>
+   
+  
+</head>
+<body>
+   <div class="container">
+    <form>
+        <label for="meetingName">Meeting Name:</label>
+        <input type="text" id="meetingName" required><br><br>
+
+        <label for="meetingRoom">Meeting Room:</label>
+        <input type="text" id="meetingRoom" required><br><br>
+
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" required><br><br>
+
+        <label for="startTime">Start Time:</label>
+        <input type="time" id="startTime" required><br><br>
+
+        <label for="duration">Duration (hours):</label>
+        <input type="number" id="duration" required><br><br>
+
+        <button type="button" class="btn btn-success" onclick="bookMeeting()">Book Meeting</button>
+    </form>
+    <a href="../Booked_Meetings/meetings.html" class="btn btn-primary">View Booked Meetings</a>
+    <a href="../Manager_page/manager1.html" class="btn btn-primary2">Return to home Page</a>
+
+
+   </div>
+
+   <script>
+    // Sample function to handle meeting booking
+    function bookMeeting() {
+        // Collect meeting details from the form (similar to previous examples)
+        const meetingName = document.getElementById("meetingName").value;
+        const meetingRoom = document.getElementById("meetingRoom").value;
+        const startDate = document.getElementById("startDate").value;
+        const startTime = document.getElementById("startTime").value;
+        const duration = document.getElementById("duration").value;
+
+        // Perform validation if needed
+
+        // Create a new meeting object
+        const newMeeting = {
+            meetingName,
+            meetingRoom,
+            startDate,
+            startTime,
+            duration
+        };
+
+        // Retrieve existing booked meetings from local storage (if any)
+        const bookedMeetings = JSON.parse(localStorage.getItem("bookedMeetings")) || [];
+
+        // Add the new meeting to the bookedMeetings array
+        bookedMeetings.push(newMeeting);
+
+        // Store the updated booked meetings in local storage
+        localStorage.setItem("bookedMeetings", JSON.stringify(bookedMeetings));
+
+        // Clear the form fields
+        document.getElementById("meetingName").value = "";
+        document.getElementById("meetingRoom").value = "";
+        document.getElementById("startDate").value = "";
+        document.getElementById("startTime").value = "";
+        document.getElementById("duration").value = "";
+
+        // Redirect to the meetings.html page
+        window.location.href = "../Booked_Meetings/meetings.html";
+    }
+</script>
+    
+</body>
+</html>

@@ -18,13 +18,13 @@
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
+                        <a class="nav-link active" href="../home_new/home.html">Home</a>
                     </li>
                 </ul>
-                <form class="d-flex">
+                <!-- <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-secondary" type="submit">Search</button>
-                </form>
+                </form> -->
             </div>
         </div>
     </nav>
@@ -47,8 +47,8 @@
                     </div>
                 </div>
                 <div class="field-footer">
-                  <button type="button" class="btn btn-primary" fdprocessedid="c331ba">Correct</button>
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="field" fdprocessedid="gcp5ad">Edit</button>
+                  <button type="button" class="btn btn-primary" fdprocessedid="c331ba" onclick="validate()">Correct</button>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="field" fdprocessedid="gcp5ad" onclick="editpage()">Edit</button>
                 </div>
               </div>
             </div>
@@ -74,6 +74,14 @@
     </header>
    
     <script>
+        function editpage()
+        {
+            window.location.href="../edit_room/edit_room.html";
+        }
+        function validate()
+    {
+    alert("The information has been validated hence stored successfully......")
+    }
         // Retrieve and display user information and last logged-in timestamp using JavaScript
         const adminNameElement = document.getElementById('admin-name');
         const adminEmailElement = document.getElementById('admin-email');
@@ -81,8 +89,8 @@
 
         // Replace this with code to fetch user information and last logged-in timestamp
         const userData = {
-            name: 'Admin Name',
-            email: 'admin@example.com',
+            name: 'Adam Hale',
+            email: 'adamhale123@example.com',
             lastLoggedIn: '2023-09-10 10:00 AM'
         };
 

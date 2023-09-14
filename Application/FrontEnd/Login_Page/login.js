@@ -35,13 +35,23 @@ document.addEventListener("DOMContentLoaded", function () {
                             }
                             else if(storedType == "Member")
                             {
-                            window.location.href="../Import_User/Import_User.html"
+                            window.location.href="../Member_Screen/index.html"
                             }
+                            else if(storedType == "Manager")
+                            {
+                                window.location.href="../Manager_page/manager1.html"
+                            }
+                            else{
+                                loginResult.innerHTML = "Incorrect values"
+                            }
+                        }
+                        else{
+                            loginResult.innerHTML = "Invalid username or password!! Enter Correct Values";
                         }
                     }
 
                     // If no matching user found
-                    loginResult.innerHTML = "Invalid username or password.";
+                    
                 } else {
                     loginResult.innerHTML = "Error loading user data.";
                 }
