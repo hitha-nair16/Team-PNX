@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" type="text/css" href="admin.css">
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="title">Admin Dashboard</div>
+            <div class="content">
+                <div class = 'field'>
+                    <p id="admin-name">Name: Loading...</p>
+                </div>
+                <div class = 'field'>
+                    <p id="admin-email">Email: Loading...</p>
+                </div>
+                <div class = 'field'>
+                    <p id="last-logged-in">Last Logged-In: Loading...</p>
+                </div>
+            </div>
+        <br>
+        <h2>List of Meeting Rooms</h2>
+        <ul id="meeting-room-list">
+            <li data-room-type="classroom"><a href="#">Classroom Training</a></li>
+            <li data-room-type="online"><a href="#">Online Training</a></li>
+            <li data-room-type="conference"><a href="#">Conference Call</a></li>
+            <li data-room-type="business"><a href="#">Business Meeting</a></li>
+        </ul>
+        <br>
+        <a href = "create-room.html" style="text-decoration: none; margin-left: 10px;" ><b>Create Room</b></a>
+        <br>
+    </div>
+    </header>
+
+    <main>
+       
+    </main>
+
+    <script>
+        // Retrieve and display user information and last logged-in timestamp using JavaScript
+        const adminNameElement = document.getElementById('admin-name');
+        const adminEmailElement = document.getElementById('admin-email');
+        const lastLoggedInElement = document.getElementById('last-logged-in');
+
+        // Replace this with code to fetch user information and last logged-in timestamp
+        const userData = {
+            name: 'Admin Name',
+            email: 'admin@example.com',
+            lastLoggedIn: '2023-09-10 10:00 AM'
+        };
+
+        // Display user information and last logged-in timestamp
+        adminNameElement.textContent = `Name: ${userData.name}`;
+        adminEmailElement.textContent = `Email: ${userData.email}`;
+        lastLoggedInElement.textContent = `Last Logged-In: ${userData.lastLoggedIn}`;
+
+        // Add click event listeners to the list items
+        const roomList = document.getElementById('meeting-room-list');
+        const listItems = roomList.getElementsByTagName('li');
+
+        for (const listItem of listItems) {
+            listItem.addEventListener('click', (event) => {
+                event.preventDefault(); // Prevent the default link behavior
+                const roomType = listItem.getAttribute('data-room-type');
+                navigateToEditRoom(roomType);
+            });
+        }
+
+        // Function to navigate to the Edit Room page
+        function navigateToEditRoom(roomType) {
+            // Redirect to the Edit Room page with the selected room type
+            window.location.href = `edit-room.html?type=${roomType}`;
+        }
+
+    </script>
+</body>
+</html>
