@@ -23,10 +23,20 @@ document.addEventListener("DOMContentLoaded", function () {
                     for (let i = 0; i < users.length; i++) {
                         const storedUsername = users[i].getElementsByTagName("Username")[0].textContent;
                         const storedPassword = users[i].getElementsByTagName("Password")[0].textContent;
+                        const storedType = users[i].getElementsByTagName("Type")[0].textContent;
+
 
                         if (username === storedUsername && password === storedPassword) {
-                            loginResult.innerHTML = "Login successful!";
-                            return;
+                            //loginResult.innerHTML = "Login successful!";
+                            //return;
+                            if(storedType == "Admin" )
+                            {
+                            window.location.href="../Admin_Page/admin.html"
+                            }
+                            else if(storedType == "Member")
+                            {
+                            window.location.href="../Import_User/Import_User.html"
+                            }
                         }
                     }
 
