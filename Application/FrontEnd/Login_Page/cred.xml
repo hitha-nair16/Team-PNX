@@ -5,8 +5,8 @@
         <Type>Admin</Type>
     </user>
     <user>
-        <Username>hitzy</Username>
-        <Password>hitzy</Password>
-        <Type>Member</Type>
+        <Username>jane</Username>
+        <Password>pass@123</Password>
+        <Type>Manager</Type>
     </user>
 </users>
