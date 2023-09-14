@@ -15,6 +15,10 @@ body {
     text-align: center;
     /*background-blend-mode : multiply;*/
     padding: 40px;
+    background: rgba(53, 55, 61, 0.9);
+    width: fit-content;
+    height: fit-content;
+   
    
 }
 
@@ -43,11 +47,11 @@ p {
     background-color: #007BFF;
     border-radius: 5px;
 }
-.bgblack{
+/* .bgblack{
     background-color: #333;
     border-radius: 5px;
     padding: 10px 20px;
-}
+} */
 
 /* CSS for the footer */
 footer {
