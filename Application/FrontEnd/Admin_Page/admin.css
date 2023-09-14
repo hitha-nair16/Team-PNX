@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  background-image: url('https://images.unsplash.com/photo-1498049860654-af1a5c566876?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'); 
+  background-size: cover; 
+  background-repeat: no-repeat;
+  opacity: 0.7;
+}
+
+html,body{
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+}
+::selection{
+  background: #4158d0;
+  color: #fff;
+}
+.wrapper{
+  width: 380px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+}
+.wrapper content{
+  padding: 30px 30px 50px 30px;
+}
+.wrapper form .field{
+  height: 50px;
+  width: 100%;
+  margin-top: 0px;
+  position: relative;
+}
+
+.wrapper ul li{
+  margin-left: 20px; 
+}
+
+.wrapper ul li a {
+  text-decoration: none; /* Remove underlines */
+  color: #1a1e21; /* Change link color */
+}
+
+ul li a:hover {
+  color: #ff4500; /* Change link color on hover */
+}
+.button-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff; /* Button color */
+  color: #fff; /* Text color */
+  text-decoration: none; /* Remove underline */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.button-link:hover {
+  background-color: #0056b3; /* Button color on hover */
+}
+
+.admin-container {
+  background-color: white;
+  padding: 20px;
+  border: 2px solid #f2f2f2;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.meeting-room-container {
+  background-color: white;
+  padding: 20px;
+  border: 2px solid #f2f2f2;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
