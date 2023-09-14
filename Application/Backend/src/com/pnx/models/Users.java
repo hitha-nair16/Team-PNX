@@ -6,40 +6,18 @@ public class Users {
     private String email; // Email
     private String phone; // Phone
     private double credits; // Credits
-    private UserRole role; // Role (Admin/Manager/Member)
+    private String role; // Role (Admin/Manager/Member)
 
-    public enum UserRole {
-        ADMIN("Admin"),
-        MANAGER("Manager"),
-        MEMBER("Member");
+    
+    
 
-        private final String roleName;
-
-        UserRole(String roleName) {
-            this.roleName = roleName.toLowerCase(); // Store in lowercase
-        }
-
-        public String getRoleName() {
-            return roleName;
-        }
-
-        public static UserRole fromString(String roleName) {
-            for (UserRole role : UserRole.values()) {
-                if (role.roleName.equalsIgnoreCase(roleName)) {
-                    return role;
-                }
-            }
-            throw new IllegalArgumentException("Invalid UserRole: " + roleName);
-        }
-    }
-
-    public Users(int id, String name, String email, String phone, double credits, UserRole role) {
+	public Users(int id, String name, String email, String phone, double credits, String role2) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.phone = phone;
         this.credits = credits;
-        this.role = role;
+        this.role = role2;
     }
 
     public int getId() {
@@ -82,15 +60,19 @@ public class Users {
         this.credits = credits;
     }
 
-    public UserRole getRole() {
-        return role;
-    }
+	public String getRole() {
+		return role;
+	}
 
-    public void setRole(UserRole role) {
-        this.role = role;
-    }
+	public void setRole(String role) {
+		this.role = role;
+	}
 
-    public String toString() {
-        return "User ID: " + id + "\nName: " + name + "\nEmail: " + email + "\nPhone: " + phone + "\nCredits: " + credits + "\nRole: " + role.getRoleName();
-    }
+	@Override
+	public String toString() {
+		return "Users [id=" + id + ", name=" + name + ", email=" + email + ", phone=" + phone + ", credits=" + credits
+				+ ", role=" + role + "]";
+	}
+
+    
 }

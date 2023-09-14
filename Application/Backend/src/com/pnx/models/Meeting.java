@@ -48,7 +48,11 @@ public class Meeting {
         this.bookingInformation = bookingInformation;
     }
     
-    public MeetingType getMeetingType(String type) {
+    public Meeting() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public MeetingType getMeetingType(String type) {
     	switch(type) {
     	 	case "Classroom Training":
     	 		return MeetingType.CLASSROOM_TRAINING;

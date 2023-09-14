@@ -5,71 +5,76 @@ import java.time.LocalTime;
 
 public class BookingInformation {
     private int id; // Unique ID
-    private MeetingRoom meetingRoom; // Meeting Room
-    private LocalDate date; // Date
-    private LocalTime startTime; // Start time
-    private LocalTime endTime; // End time
+    private String meetingRoom; // Meeting Room
+    private String date; // Date
+    private String startTime; // Start time
+    private String endTime; // End time
     private int bookedByUserId; // Booked by (User ID)
 
-    public BookingInformation(int id, MeetingRoom meetingRoom, LocalDate date, LocalTime startTime, LocalTime endTime, int bookedByUserId) {
+    public BookingInformation(int id, String meetingroom2, String date2, String stime, String etime, int bookedByUserId) {
         this.id = id;
-        this.meetingRoom = meetingRoom;
-        this.date = date;
-        this.startTime = startTime;
-        this.endTime = endTime;
+        this.meetingRoom = meetingroom2;
+        this.date = date2;
+        this.startTime = stime;
+        this.endTime = etime;
         this.bookedByUserId = bookedByUserId;
     }
 
-    public int getId() {
-        return id;
-    }
+	public int getId() {
+		return id;
+	}
 
-    public void setId(int id) {
-        this.id = id;
-    }
+	public void setId(int id) {
+		this.id = id;
+	}
 
-    public MeetingRoom getMeetingRoom() {
-        return meetingRoom;
-    }
+	public String getMeetingRoom() {
+		return meetingRoom;
+	}
 
-    public void setMeetingRoom(MeetingRoom meetingRoom) {
-        this.meetingRoom = meetingRoom;
-    }
+	public void setMeetingRoom(String meetingRoom) {
+		this.meetingRoom = meetingRoom;
+	}
 
-    public LocalDate getDate() {
-        return date;
-    }
+	public String getDate() {
+		return date;
+	}
 
-    public void setDate(LocalDate date) {
-        this.date = date;
-    }
+	public void setDate(String date) {
+		this.date = date;
+	}
 
-    public LocalTime getStartTime() {
-        return startTime;
-    }
+	public String getStartTime() {
+		return startTime;
+	}
 
-    public void setStartTime(LocalTime startTime) {
-        this.startTime = startTime;
-    }
+	public void setStartTime(String startTime) {
+		this.startTime = startTime;
+	}
 
-    public LocalTime getEndTime() {
-        return endTime;
-    }
+	public String getEndTime() {
+		return endTime;
+	}
 
-    public void setEndTime(LocalTime endTime) {
-        this.endTime = endTime;
-    }
+	public void setEndTime(String endTime) {
+		this.endTime = endTime;
+	}
 
-    public int getBookedByUserId() {
-        return bookedByUserId;
-    }
+	public int getBookedByUserId() {
+		return bookedByUserId;
+	}
 
-    public void setBookedByUserId(int bookedByUserId) {
-        this.bookedByUserId = bookedByUserId;
-    }
+	public void setBookedByUserId(int bookedByUserId) {
+		this.bookedByUserId = bookedByUserId;
+	}
 
-    public String toString() {
-        return "Booking ID: " + id + "\nMeeting Room: " + meetingRoom.getName() + "\nDate: " + date + "\nStart Time: " + startTime + "\nEnd Time: " + endTime + "\nBooked by User ID: " + bookedByUserId;
-    }
+	@Override
+	public String toString() {
+		return "BookingInformation [id=" + id + ", meetingRoom=" + meetingRoom + ", date=" + date + ", startTime="
+				+ startTime + ", endTime=" + endTime + ", bookedByUserId=" + bookedByUserId + "]";
+	}
+	
+	
+
 }
 
