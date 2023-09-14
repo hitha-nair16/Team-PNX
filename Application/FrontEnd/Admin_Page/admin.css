@@ -5,13 +5,18 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+body {
+  background-image: url('https://images.unsplash.com/photo-1498049860654-af1a5c566876?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'); 
+  background-size: cover; 
+  background-repeat: no-repeat;
+  opacity: 0.7;
+}
+
 html,body{
   display: grid;
   height: 100%;
   width: 100%;
   place-items: center;
-  background: #f2f2f2;
-  /* background: linear-gradient(-135deg, #c850c0, #4158d0); */
 }
 ::selection{
   background: #4158d0;
@@ -22,16 +27,6 @@ html,body{
   background: #fff;
   border-radius: 15px;
   box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
-}
-.wrapper .title{
-  font-size: 25px;
-  font-weight: 600;
-  text-align: center;
-  line-height: 90px;
-  color: #fff;
-  user-select: none;
-  border-radius: 15px 15px 0 0;
-  background: linear-gradient(-135deg, #c850c0, #4158d0);
 }
 .wrapper content{
   padding: 30px 30px 50px 30px;
@@ -49,9 +44,39 @@ html,body{
 
 .wrapper ul li a {
   text-decoration: none; /* Remove underlines */
-  color: #0078d4; /* Change link color */
+  color: #1a1e21; /* Change link color */
 }
 
 ul li a:hover {
   color: #ff4500; /* Change link color on hover */
+}
+.button-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff; /* Button color */
+  color: #fff; /* Text color */
+  text-decoration: none; /* Remove underline */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.button-link:hover {
+  background-color: #0056b3; /* Button color on hover */
+}
+
+.admin-container {
+  background-color: white;
+  padding: 20px;
+  border: 2px solid #f2f2f2;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.meeting-room-container {
+  background-color: white;
+  padding: 20px;
+  border: 2px solid #f2f2f2;
+  border-radius: 5px;
+  margin-bottom: 20px;
 }

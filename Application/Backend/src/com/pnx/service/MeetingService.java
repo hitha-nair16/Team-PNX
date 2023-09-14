@@ -1,12 +1,12 @@
-package com.pnx.service;
+package com.pnx.services;
 
 import java.util.List;
 
-import com.hsbc.exceptions.DatabaseException;
-import com.hsbc.exceptions.MeetingNotFoundException;
-import com.hsbc.exceptions.UnauthorizedAccessException;
 import com.pnx.models.Meeting;
 import com.pnx.models.Users.UserRole;
+import com.pnx.exceptions.DatabaseException;
+import com.pnx.exceptions.MeetingNotFoundException;
+import com.pnx.exceptions.UnauthorizedAccessException;
 
 public interface MeetingService {
 	Meeting getMeetingById(int id) throws MeetingNotFoundException, DatabaseException;
