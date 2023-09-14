@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link
+    href="
+https://cdn.jsdelivr.net/npm/bootswatch@5.3.1/dist/cerulean/bootstrap.min.css
+"
+    rel="stylesheet"
+  />
+    <!-- Add Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+ 
+    
+    <link rel="stylesheet" href="createRoom.css" />
+     <!-- font awesome cdn  -->
+  <script src="https://kit.fontawesome.com/d717612254.js" crossorigin="anonymous"></script>
+  <!-- aos animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <!-- for responsivebehaviour -->
+   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+   <meta name="HandheldFriendly" content="true">
+
+    <title>Create Meeting Room</title>
+  </head>
+  <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+      <div class="container-fluid " id="nv">
+        <a class="navbar-brand " id="navLink" href="#">RoomBook</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarColor02"
+          aria-controls="navbarColor02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+           <span class="navbar-toggler-icon"><img class="tog" src="images/toggle.png" alt=""></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor02">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#"
+                >Home
+                <span class="visually-hidden">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Admin</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Import Users</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="wrapper">
+      <div class="title">Create Meeting Room</div>
+      <div class="content">
+        <form id="meeting-form">
+          <div class="field">
+            
+            <input type="text" id="name" placeholder="Name" class="fieldInput" name="name" required>
+            <!-- <label class="fieldLabel" for="name">Name<span>*</span>:</label> -->
+            
+          </div>
+
+          <div class="field">
+            
+            <input type="number" min="1" id="seatingCapacity" placeholder="Seating Capacity" class="fieldInput" name="seatingCapacity" required>
+            <!-- <label class="fieldLabel" for="seatingCapacity">Seating Capacity<span>*</span>:</label> -->
+          
+          </div>
+
+          <div class="">
+              <div class="checkbox">
+                  <label>Amenities Available (Select at least 2):</label>
+              </div>
+        
+              <div class="checkbox">
+                  <label for="projector">Projector</label>
+                  <input type="checkbox" id="projector"  name="amenities" value="Projector">
+              </div>
+              <div class="checkbox">
+                  <label for="wifi">Wi-Fi Connection</label>
+                  <input type="checkbox" id="wifi" name="amenities" value="Wi-Fi Connection">
+              </div>
+              <div class="checkbox">
+                  <label for="conferenceCall">Conference call facility</label>
+                  <input type="checkbox" id="conferenceCall" name="amenities" value="Conference call facility">
+              </div>
+              <div class="checkbox">
+                  <label for="whiteboard">Whiteboard</label>
+                  <input type="checkbox" id="whiteboard" name="amenities" value="Whiteboard">
+              </div>
+              <div class="checkbox">
+                  <label for="waterDispenser">Water dispenser</label>
+                  <input type="checkbox" id="waterDispenser" name="amenities" value="Water dispenser">
+              </div>
+              <div class="checkbox">
+                  <label for="tv">TV</label>
+                  <input type="checkbox" id="tv" name="amenities" value="TV">
+              </div>
+              <div class="checkbox">
+                  <label for="coffeeMachine">Coffee machine</label>
+                  <input type="checkbox" id="coffeeMachine" name="amenities" value="Coffee machine">
+              </div>
+          </div>
+
+          <!-- <div class="field">
+              <div class="buttons">
+                  <input type="submit" value="Save" onclick="validateForm()">
+                  <input type="reset" value="Cancel">
+              </div>
+          </div> -->
+
+
+
+          <!-- <div class="field">
+            <label for="title">Name:</label>
+            <input type="text" id="title" required />
+          </div>
+
+          <div class="field">
+            <label for="meeting-date">Meeting Date:</label>
+            <input type="date" id="meeting-date" required />
+          </div>
+
+          <div class="field">
+            <label for="start-time">Start Time:</label>
+            <input type="time" id="start-time" required />
+          </div>
+
+          <div class="field">
+            <label for="duration">Duration (hours):</label>
+            <input type="number" id="duration" required />
+          </div>
+
+          <div class="field">
+            <label for="meeting-type">Meeting Type:</label>
+            <select id="meeting-type" required>
+              <option value="conference">Conference</option>
+              <option value="presentation">Presentation</option> -->
+              <!-- Add more options as needed -->
+            <!-- </select>
+          </div>
+
+          <div class="field">
+            <label for="members">Members:</label>
+            <input type="text" id="members" required /> -->
+            <!-- Implement a UI to search and add members here -->
+          <!-- </div>
+
+          <div class="field">
+            <label for="meeting-room">Meeting Room:</label>
+            <select id="meeting-room" required>
+              <option value="room1">Meeting Room 1</option>
+              <option value="room2">Meeting Room 2</option> -->
+              <!-- Add more room options and availability checks as needed -->
+            <!-- </select>
+          </div> -->
+
+
+          <div class="field ">
+            <div class="buttons">
+              <input type="submit" value="Save" id="save-button" onclick="validateForm()"></input>
+              <input type="reset"  value="Cancel" id="cancel-button"></input>
+      
+            </div>
+                </div>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <div class="social-menu">
+        <h2 class="contact">Contact Us</h2>
+        <a 
+          data-aos="zoom-in-down"
+          href="mailto:chauhanakash505@gmail.com"
+          class="contactemail btn btn-dark"
+          >Send us an Email</a
+        >
+        <div data-aos="zoom-in-down" class="listitems">
+          <ul>
+            <li>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </li>
+          </ul>
+        </div>
+        <p class="copyright">Copyright © Team PNX | All rights reserved</p>
+      </div>
+    </footer>
+    <script src="createRoom.js"></script>
+    <!-- aos animation script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- jqury -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- bootstrap js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
