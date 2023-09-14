@@ -1,20 +1,22 @@
-package com.pnx.service;
+package com.pnx.services;
 
 import java.util.List;
 
-import com.hsbc.exceptions.DatabaseException;
-import com.hsbc.exceptions.MeetingNotFoundException;
-import com.hsbc.exceptions.UnauthorizedAccessException;
-import com.pnx.dao.MeetingDAO;
 import com.pnx.models.Meeting;
 import com.pnx.models.Users.UserRole;
+import com.pnx.dao.MeetingDao;
+import com.pnx.dao.MeetingDao;
+import com.pnx.exceptions.DatabaseException;
+import com.pnx.exceptions.MeetingNotFoundException;
+import com.pnx.exceptions.UnauthorizedAccessException;
 
 public class MeetingServiceImpl implements MeetingService {
-    private MeetingDAO meetingDAO;
+    private MeetingDao meetingDAO;
 
-    public MeetingServiceImpl(MeetingDAO meetingDAO) {
-        this.meetingDAO = meetingDAO;
-    }
+	public void setMeetingDAO(MeetingDao meetingDAO) {
+		this.meetingDAO = meetingDAO;
+	}
+
    
     @Override
     public Meeting getMeetingById(int id) throws MeetingNotFoundException, DatabaseException {
@@ -91,6 +93,7 @@ public class MeetingServiceImpl implements MeetingService {
 		
 	}
 
+	
 
   
 }
