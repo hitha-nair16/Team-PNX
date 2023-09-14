@@ -36,3 +36,12 @@ tv int,
 coffee_machine int,
 per_hour_cost int
 );
+create table booking_info(
+unique_id int primary key,
+meeting_room varchar(30),
+_date date,
+start_time time,
+end_time time,
+booked_by int,
+constraint foreign key(booked_by)references users(unique_Id)
+);
