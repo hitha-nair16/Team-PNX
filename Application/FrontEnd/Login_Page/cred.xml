@@ -1,0 +1,12 @@
+<users>
+    <user>
+        <Username>team_pnx</Username>
+        <Password>password</Password>
+        <Type>Admin</Type>
+    </user>
+    <user>
+        <Username>hitzy</Username>
+        <Password>hitzy</Password>
+        <Type>Member</Type>
+    </user>
+</users>
