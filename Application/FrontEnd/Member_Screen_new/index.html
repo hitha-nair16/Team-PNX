@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.1/dist/cerulean/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Member Page</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+      <div class="container-fluid" id="nv">
+        <a class="navbar-brand" id="navLink" href="#">RoomBook</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarColor02"
+          aria-controls="navbarColor02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor02">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#"
+                >Home
+                <span class="visually-hidden">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Rooms</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <header>
+      <h1>Welcome, Member!</h1>
+    </header>
+    <main>
+      <section class="schedule">
+        <h2>Meeting Schedule</h2>
+        <div id="schedule-list"></div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
