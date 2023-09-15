@@ -65,5 +65,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function gotoimportusers()
 {
-    window.location.href="../Import_User/Import_User.html"
+    window.location.href="../Import_User_new/Import_User.html"
 }
